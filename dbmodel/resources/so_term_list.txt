@@ -17,7 +17,7 @@ syntenic_region
 #EST
 #enhancer
 exon
-#five_prime_UTR
+five_prime_UTR
 #forward_primer
 gene
 gene_segment
@@ -28,9 +28,9 @@ insertion
 intergenic_region
 intron
 #lincRNA_gene
-#match
-#match_part
-#mRNA
+match
+match_part
+mRNA
 #miRNA_gene
 minisatellite
 #microarray_oligo
@@ -44,10 +44,10 @@ minisatellite
 #protein_coding_gene
 polymorphic_pseudogene
 pseudogene
-#pseudogenic_exon
+pseudogenic_exon
 pseudogenic_gene_segment
 pseudogenic_region
-#pseudogenic_transcript
+pseudogenic_transcript
 #point_mutation
 #primer
 QTL
@@ -68,8 +68,8 @@ sequence_variant
 #snRNA_gene
 #SRP_RNA_gene
 #stRNA_gene
-#start_codon
-#stop_codon
+start_codon
+stop_codon
 syntenic_region
 #telomere
 #telomerase_RNA_gene
@@ -77,7 +77,7 @@ syntenic_region
 #tmRNA_gene
 transgene
 #tRNA_gene
-#three_prime_UTR
+three_prime_UTR
 transcript
 #transposable_element
 #transposable_element_insertion_site
@@ -85,7 +85,14 @@ UTR
 #YAC_end
 
 # many-to-many part_of relationships (default is many-to-one)
-#exon.transcript
+cds.mRNA
+exon.transcript
 #intron.transcript
-#UTR.transcript
+mRNA.gene
 #EST.overlapping_EST_set
+stop_codon.mRNA
+start_codon.mRNA
+three_prime_UTR.mRNA
+five_prime_UTR.mRNA
+match_part.gene
+transcript.gene
